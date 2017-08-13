@@ -5,13 +5,13 @@ import numpy as np
 from PIL import Image
 
 # トレーニング画像
-train_path = './train_data'
+train_path = '../train_data'
 
 # テスト画像
-test_path = './test_data'
+test_path = '../test_data'
 
 # Haar-like特徴分類器
-cascadePath = "haarcascades/haarcascade_frontalface_default.xml"
+cascadePath = "../haarcascades/haarcascade_frontalface_default.xml"
 faceCascade = cv2.CascadeClassifier(cascadePath)
 
 # 顔認識器の構築 for OpenCV 2

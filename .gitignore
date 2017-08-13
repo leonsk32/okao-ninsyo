@@ -1,7 +1,15 @@
+# データベース
 FACEDB/
+recognizer/
+
+# 画像
 *.jpg
 *.png
 *.gif
 *.bmp
 
+# 中間ファイル
+*.pyc
+
+# MacOS
 .DS_Store
