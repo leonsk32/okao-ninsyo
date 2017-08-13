@@ -1,0 +1,7 @@
+FACEDB/
+*.jpg
+*.png
+*.gif
+*.bmp
+
+.DS_Store
