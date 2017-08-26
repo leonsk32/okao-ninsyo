@@ -10,6 +10,7 @@ test_path = '../test_data'
 # コンストラクタ
 fi = face_identifier.face_identifier()
 # 学習
-fi.train(train_path)
+# 追加学習なら第二引数はTrue
+fi.train(train_path, True)
 # 識別
-fi.test(test_path)
+# fi.test(test_path)
