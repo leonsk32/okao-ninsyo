@@ -28,9 +28,9 @@ def capture_camera(mirror=True, size=None):
 		# cv2.imshow('camera capture', frame)
 
 		# 識別
-		if ((i % 3) == 0):
-			fi.stream(frame)
-		i += 1
+		#if ((i % 3) == 0):
+		fi.stream(frame)
+		#i += 1
 
 		k = cv2.waitKey(1) # 1msec待つ
 		if k == 27: # ESCキーで終了

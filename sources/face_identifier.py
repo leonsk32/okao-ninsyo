@@ -84,9 +84,9 @@ class face_identifier:
 	def get_images_and_labels(self, path):
 		images = []
 		labels = []
-	 	files = []
-	 	done_path = os.path.join(path, "done")
-	 	for f in os.listdir(path):
+		files = []
+		done_path = os.path.join(path, "done")
+		for f in os.listdir(path):
 			# 画像のパス
 			image_path = os.path.join(path, f)
 			# 隠しファイル，ディレクトリは無視
