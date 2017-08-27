@@ -112,4 +112,43 @@ class face_identifier:
 
 		return images, labels, files
 
+	# path内の顔画像を切り取る
+	def trim_faces(self, path):
+		# 顔画像格納先
+		faces_path = os.path.join(path, "faces")
+		done_path = os.path.join(path, "done")
+		for f in os.listdir(path):
+			# 読み込み画像パス
+			image_path = os.path.join(path, f)
+			# 拡張子分離
+			name, ext = os.path.splitext(f)
+			# 保存先パス（連番除く）
+			dst_path = os.path.join(faces_path, name)
+			if (f[0:1] == "." or os.path.isdir(image_path)):
+				continue
+			print f
+
+			image = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
+			faces = self.face_cascade.detectMultiScale(image)
+			# 連番
+			i = 0
+			for (x, y, w, h) in faces:
+				# 顔を 200x200 サイズにリサイズ
+				roi = cv2.resize(image[y: y + h, x: x + w], (200, 200), interpolation=cv2.INTER_LINEAR)
+				# 連番をつけて保存
+				cv2.imwrite(dst_path + "_" + str(i) + ".bmp", roi)
+				i += 1
+
+			# 終わったらDONEへ
+			shutil.move(image_path, done_path)
+
+
+
+
+
+
+
+
+
+
 		
