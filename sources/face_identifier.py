@@ -9,7 +9,7 @@ class face_identifier:
 		self.recognizer_path = '../recognizer/recognizer.yml'
 
 		# 顔識別
-		self.cascade_path = "../haarcascades/haarcascade_frontalface_default.xml"
+		self.cascade_path = "../haarcascades/haarcascades/haarcascade_frontalface_alt2.xml"
 		self.face_cascade = cv2.CascadeClassifier(self.cascade_path)
 
 		# 顔認識器の構築 for OpenCV 2
