@@ -1,6 +1,8 @@
-# データベース
+# データ
 FACEDB/
 recognizer/
+data/
+gs/
 
 # 画像
 *.jpg

@@ -10,3 +10,7 @@ $ pyenv versions
 $ pyenv global anaconda-4.0.0
 $ python -V
 ```
+
+
+## Note
+trimデータの解像度が高すぎると背景が顔と認識されがち
