@@ -125,7 +125,8 @@ class face_identifier:
 			label, confidence = self.recognizer.predict(images[i])
 			person_name = self.mapping_inv[label]
 			print("Test Image: {}, Predicted Person: {}, Confidence: {}".format(f, person_name, confidence))
-			data = [f, person_name]
+			time = f[0:4] + "/" + f[4:6] + "/" + f[6:8] + " " + f[8:10] + ":" + f[10:12] + ":" + f[12:14]
+			data = [time, person_name]
 			self.worksheet.append_row(data)
 
 		# i = 0
