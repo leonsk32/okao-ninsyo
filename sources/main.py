@@ -23,11 +23,11 @@ if (args[1] == "trim"):
 	# 顔切り出し
 	fi.trim_faces(raw_path, trim_path)
 elif (args[1] == "train"):
-	# 新規学習
+	# 追加学習
 	fi.train(train_path, False)
 elif (args[1] == "new_train"):
-	# 追加学習
-	fi.train(train_faces_path, True)
+	# 新規学習
+	fi.train(train_path, True)
 elif (args[1] == "test"):
 	# 識別・スプレッドシート書き込み
 	fi.test(test_path)

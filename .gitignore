@@ -3,6 +3,7 @@ FACEDB/
 recognizer/
 data/
 gs/
+haarcascades/
 
 # 画像
 *.jpg
